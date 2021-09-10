@@ -2,6 +2,6 @@
 
 package org.tw.build.java
 
-class WelcomeMessage {
+class JavaBuild {
     static String message = "Welcome to GridCI"
 }
