@@ -5,5 +5,5 @@ def welcome() {
 }
 
 def call() {
-    welcome()
+    welcome
 }
