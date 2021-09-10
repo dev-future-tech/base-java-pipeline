@@ -1,9 +1,6 @@
 #!/usr/bin/env groovy
-
-def welcome() {
-    echo "Today I want to welcome you. ${JavaBuild.message}"
-}
+import org.tw.build.java.JavaBuild
 
 def call() {
-    welcome
+    echo "Today I want to welcome you. ${JavaBuild.message}"
 }
