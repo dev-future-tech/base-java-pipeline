@@ -18,5 +18,9 @@ podTemplates.dockerTemplate {
 }
 
 def call(Closure body) {
-    podTemplates.javaTemplate(body)
+    podTemplates.javaTemplate {
+        node(POD_LABEL) {
+            body
+        }
+    }
 }
