@@ -5,9 +5,9 @@ package org.tw.build.java
 class YamlBuild {
     def getHeader(String name = '') {
         return '''apiVersion: v1
-        kind: Pod
-        metadata:
-          name: ''' + name + '''
-        '''
+kind: Pod
+metadata:
+  name: ''' + name + '''
+'''
     }
 }
