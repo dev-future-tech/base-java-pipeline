@@ -2,7 +2,7 @@
 
 import org.tw.build.java.YamlBuild
 
-def getWithContainers(String... name = ['human']) {
+def getWithContainers(String... containers = ['human']) {
     containers.each{ containerName -> 
         echo "This container is ${containerName}"
         podYaml += YamlBuild.getHeader(containerName)
