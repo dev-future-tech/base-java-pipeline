@@ -16,3 +16,7 @@ podTemplates.dockerTemplate {
         }
     }
 }
+
+def call(Closure body) {
+    podTemplates.javaTemplate(body)
+}
