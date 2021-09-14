@@ -15,4 +15,14 @@ public void mavenTemplate(body) {
     }
 }
 
+public void javaTemplate(body) {
+  podTemplate (
+    containers: [
+        containerTemplate(name: 'java', image: 'openjdk:11-oracle', command: 'sleep', args: '99d'),
+        containerTemplate(name: 'terraform', image: 'hashicorp/terraform:1.0.6', command: 'sleep', args: '99d')
+    ]) {
+      body.call()
+    }
+}
+
 return this
