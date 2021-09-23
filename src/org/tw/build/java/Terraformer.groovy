@@ -22,24 +22,24 @@ spec:
         switch (containerName) {
             case "terraform" : 
                 return """
-- name: terraform
-  image: hashicorp/terraform:1.0.6
-  command: ['sleep', '99d']
-  tty: true
+    - name: terraform
+      image: hashicorp/terraform:1.0.6
+      command: ['sleep', '99d']
+      tty: true
                 """;
             case "java" :
                 return """
-- name: java
-  image: openjdk:11-oracle
-  command: ['sleep', '99d']
-  tty: true
+    - name: java
+      image: openjdk:11-oracle
+      command: ['sleep', '99d']
+      tty: true
             """;
             case "dotnet" :
                 return """
-- name: dotnet
-  image: bitnami/dotnet-sdk:5
-  command: ['sleep', '99d']
-  tty: true
+    - name: dotnet
+      image: bitnami/dotnet-sdk:5
+      command: ['sleep', '99d']
+      tty: true
             """;
             default:
                 return "";
