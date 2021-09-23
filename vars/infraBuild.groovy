@@ -2,9 +2,10 @@
 
 import org.tw.build.java.Terraformer;
 
-former = new Terraformer();
 
 def call() {
+    former = new Terraformer();
+    
     pipeline {
         agent {
             kubernetes {
