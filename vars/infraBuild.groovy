@@ -2,7 +2,7 @@
 
 import org.tw.build.java.Terraformer;
 
-def former = new Terraformer();
+Terraformer former = new Terraformer();
 
 def call() {
     pipeline {
