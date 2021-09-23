@@ -3,8 +3,9 @@
 import org.tw.build.java.Terraformer;
 
 
-def call() {
+def call(String project) {
     former = new Terraformer();
+    echo "Building project ${project}"
     echo former.getInfraBuild();
 
     pipeline {
