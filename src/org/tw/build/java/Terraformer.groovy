@@ -2,7 +2,7 @@ package org.tw.build.java
 
 class Terraformer {
     public String getInfraBuild() {
-        return getTerraformHeader() + getContainer("terraform");
+        return getTerraformHeader();
     }
 
     public String getTerraformHeader() {
@@ -14,7 +14,7 @@ metadata:
     build-infra: terraform
 spec:
   containers:
-  """ + getContainer("terraform") +
+  """ + getContainer("terraform") + getContainer("dotnet")
         """ """
     }
 
