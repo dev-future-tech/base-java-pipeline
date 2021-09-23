@@ -5,6 +5,7 @@ import org.tw.build.java.Terraformer;
 
 def call() {
     former = new Terraformer();
+    echo former.getInfraBuild();
 
     pipeline {
         agent {
