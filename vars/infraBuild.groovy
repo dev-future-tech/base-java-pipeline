@@ -16,6 +16,10 @@ def call() {
         stages {
             stage ("init infra") {
                 steps {
+                    container('dotnet') {
+                        sh 'dotnet restore'
+                        sh 'dotnet build'
+                    }
                     container('terraform') {
                         sh 'terraform init'
                     }
