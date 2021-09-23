@@ -1,11 +1,11 @@
 package org.tw.build.java
 
 class Terraformer {
-    String getInfraBuild() {
+    public String getInfraBuild() {
         return getTerraformHeader() + getContainer("terraform");
     }
 
-    String getTerraformHeader() {
+    public String getTerraformHeader() {
         return """
 apiVersion: v1
 kind: Pod
@@ -18,7 +18,7 @@ spec:
         """ """
     }
 
-    String getContainer (String containerName) {
+    public String getContainer (String containerName) {
         switch (containerName) {
             case "terraform" : 
                 return """

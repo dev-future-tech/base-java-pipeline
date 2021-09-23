@@ -5,11 +5,11 @@ import org.tw.build.java.Terraformer;
 
 def call() {
     former = new Terraformer();
-    
+
     pipeline {
         agent {
             kubernetes {
-                yaml former.getInfraBuild()
+                yaml ${former.getInfraBuild()}
             }
         }
         stages {
