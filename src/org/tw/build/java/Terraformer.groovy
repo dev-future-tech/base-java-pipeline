@@ -13,9 +13,7 @@ metadata:
   labels:
     build-infra: terraform
 spec:
-  containers:
-  """ + getContainer("terraform") + getContainer("dotnet")
-        """ """
+  containers:""" + getContainer("terraform") + getContainer("dotnet")
     }
 
     public String getContainer (String containerName) {
