@@ -18,7 +18,7 @@ spec:
         """ """
     }
 
-    getContainer (String containerName) {
+    String getContainer (String containerName) {
         switch (containerName) {
             case "terraform" : 
                 return """
