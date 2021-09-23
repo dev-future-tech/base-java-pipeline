@@ -22,6 +22,8 @@ def call() {
                     }
                     container('terraform') {
                         sh 'terraform init'
+                        sh 'terraform plan'
+                        sh 'terraform apply'
                     }
                 }
             }
