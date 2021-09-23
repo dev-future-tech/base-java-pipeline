@@ -9,7 +9,7 @@ def call() {
     pipeline {
         agent {
             kubernetes {
-                yaml ${former.getInfraBuild()}
+                yaml "\"" + former.getInfraBuild() + "\""
             }
         }
         stages {
