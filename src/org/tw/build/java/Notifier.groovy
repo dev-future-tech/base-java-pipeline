@@ -1,9 +1,8 @@
-package org.tw.build.java
+#! /usr/bin groovy
 
-public class Notifier {
-    public void sendNotification(Map params) {
-        emailext body: params.body,
-            subject: params.subject,
-            to: params.recipient
-    }
+def sendNotification(Map params) {
+    emailext ( body: params.body,
+        subject: params.subject,
+        to: params.recipient)
 }
+return this
