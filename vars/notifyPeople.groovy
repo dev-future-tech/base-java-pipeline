@@ -1,9 +1,10 @@
 #!/usr/bin/env groovy
 
-def call() {
-    emailext body: 'GridCI is open for business!!!',
-        subject: 'Welcome to GridCI',
-        to: 'anthony.ikeda@thoughtworks.com'
-
+def call(String recipient = 'anthony.ikeda@thoughtworks.com', 
+            String subject = 'Welcome to GridCI',
+            String body = 'GridCI is open for business!!!') {
+    emailext body: body,
+        subject: subject,
+        to: recipient
 }
 
