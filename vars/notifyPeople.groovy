@@ -7,6 +7,6 @@ def call(subject = "${JOB_NAME} - ${BUILD_NUMBER}", body = "Notifying for job ${
 
     emailext body: body,
         subject: subject,
-        to: recipient
+        to: recipients
 }
 
