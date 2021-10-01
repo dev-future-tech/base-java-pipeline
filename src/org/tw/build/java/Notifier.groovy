@@ -1,4 +1,4 @@
-#! /usr/bin groovy
+#!/usr/bin/env groovy
 
 def sendNotification(Map params) {
     emailext ( body: params.body,
