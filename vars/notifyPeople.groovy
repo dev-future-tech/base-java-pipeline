@@ -7,6 +7,7 @@ def sendNotification(Map params) {
         to: params.recipient
 }
 def call(subject = 'The real subject', body = 'Empty default body', recipient='anthony.ikeda@thoughtworks.com') {
+    echo "Notifying for job ${JOB_NAME} at build ${BUILD_NUMBER}"
     sendNotification([recipient: recipient, subject: subject, body: body])
 }
 
