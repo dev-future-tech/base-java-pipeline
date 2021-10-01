@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 def sendNotification(Map params) {
-    echo "Sending to ${recipient}"
+    echo "Sending to ${params.recipient}"
     emailext body: params.body,
         subject: params.subject,
         to: params.recipient
