@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-package org.tx.build.java
+package org.tw.build.java
 
 def sendNotification(Map params) {
     emailext ( body: params.body,
