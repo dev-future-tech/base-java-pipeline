@@ -1,12 +1,12 @@
 #!/usr/bin/env groovy
 
-def sendNotification(recipient = 'anthony.ikeda@thoughtworks.com', subject = 'The real subject', body = 'Empty default body') {
+def sendNotification(Map params) {
     echo "Sending to ${recipient}"
-    emailext body: body,
-        subject: subject,
-        to: recipient
+    emailext body: params.body,
+        subject: params.subject,
+        to: params.recipient
 }
-def call(Map params) {
-    sendNotification(params.recipient, params.subject, params.recipient)
+def call(recipient='anthony.ikeda@thoughtworks.com', subject = 'The real subject', body = 'Empty default body') {
+    sendNotification([recipient: recipient, subject: subject, recipient: recipient])
 }
 
