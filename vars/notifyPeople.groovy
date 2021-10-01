@@ -7,6 +7,6 @@ def sendNotification(Map params) {
         to: params.recipient
 }
 def call(recipient='anthony.ikeda@thoughtworks.com', subject = 'The real subject', body = 'Empty default body') {
-    sendNotification([recipient: recipient, subject: subject, recipient: recipient])
+    sendNotification([recipient: recipient, subject: subject, body: body])
 }
 
